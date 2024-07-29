@@ -1,0 +1,287 @@
+[
+    {
+        "id": 1,
+        "productName": "vanilla cappucino",
+        "productPrice": 6.45,
+        "productSugarLevel": { 
+                                                "25%" : 25, 
+                                                "50%": 50, 
+                                                "75%": 75, 
+                                                "100%": 100 
+                                            },
+        "productSizes": { 
+                                    "small" : 0.8, 
+                                    "regular": 1, 
+                                    "medium": 1.2, 
+                                    "large": 1.5 
+                                },
+        "productQuantity": 1,
+        "productImage": "cappucino-vanilla.jfif"
+    },
+    {
+        "id": 2,
+        "productName": "caramel cappucino",
+        "productPrice": 6.75,
+        "productSugarLevel": { 
+                                                "25%" : 25, 
+                                                "50%": 50, 
+                                                "75%": 75, 
+                                                "100%": 100 
+                                            },
+        "productSizes": { 
+                                    "small" : 0.8, 
+                                    "regular": 1, 
+                                    "medium": 1.2, 
+                                    "large": 1.5 
+                                },
+        "productQuantity": 1,
+        "productImage": "cappucino-caramel.jfif"
+    },
+    {
+        "id": 3,
+        "productName": "hazelnut cappucino",
+        "productPrice": 6.45,
+        "productSugarLevel": { 
+                                                "25%" : 25, 
+                                                "50%": 50, 
+                                                "75%": 75, 
+                                                "100%": 100 
+                                            },
+        "productSizes": { 
+                                    "small" : 0.8, 
+                                    "regular": 1, 
+                                    "medium": 1.2, 
+                                    "large": 1.5 
+                                },
+        "productQuantity": 1,
+        "productImage": "cappucino-hazelnut.jpg"
+    },
+    {
+        "id": 4,
+        "productName": "choco latte",
+        "productPrice": 7.00,
+        "productSugarLevel": { 
+                                                "25%" : 25, 
+                                                "50%": 50, 
+                                                "75%": 75, 
+                                                "100%": 100 
+                                            },
+        "productSizes": { 
+                                    "small" : 0.8, 
+                                    "regular": 1, 
+                                    "medium": 1.2, 
+                                    "large": 1.5 
+                                },
+        "productQuantity": 1,
+        "productImage": "latte-choco.jpg"
+    },
+    {
+        "id": 5,
+        "productName": "cinnamon latte",
+        "productPrice": 7.20,
+        "productSugarLevel": { 
+                                                "25%" : 25, 
+                                                "50%": 50, 
+                                                "75%": 75, 
+                                                "100%": 100 
+                                            },
+        "productSizes": { 
+                                    "small" : 0.8, 
+                                    "regular": 1, 
+                                    "medium": 1.2, 
+                                    "large": 1.5 
+                                },
+        "productQuantity": 1,
+        "productImage": "latte-cinnamon.jpg"
+    },
+    {
+        "id": 6,
+        "productName": "pumpkin latte",
+        "productPrice": 7.70,
+        "productSugarLevel": { 
+                                                "25%" : 25, 
+                                                "50%": 50, 
+                                                "75%": 75, 
+                                                "100%": 100 
+                                            },
+        "productSizes": { 
+                                    "small" : 0.8, 
+                                    "regular": 1, 
+                                    "medium": 1.2, 
+                                    "large": 1.5 
+                                },
+        "productQuantity": 1,
+        "productImage": "latte-pumpkin.jpg"
+    },
+    {
+        "id": 7,
+        "productName": "cafe mocha frappuccino",
+        "productPrice": 8.00,
+        "productSugarLevel": { 
+                                                "25%" : 25, 
+                                                "50%": 50, 
+                                                "75%": 75, 
+                                                "100%": 100 
+                                            },
+        "productSizes": { 
+                                    "small" : 0.8, 
+                                    "regular": 1, 
+                                    "medium": 1.2, 
+                                    "large": 1.5 
+                                },
+        "productQuantity": 1,
+        "productImage": "frappuccino-cafe-mocha.jpg"
+    },
+    {
+        "id": 8,
+        "productName": "strawberry frappuccino",
+        "productPrice": 8.25,
+        "productSugarLevel": { 
+                                                "25%" : 25, 
+                                                "50%": 50, 
+                                                "75%": 75, 
+                                                "100%": 100 
+                                            },
+        "productSizes": { 
+                                    "small" : 0.8, 
+                                    "regular": 1, 
+                                    "medium": 1.2, 
+                                    "large": 1.5 
+                                },
+        "productQuantity": 1,
+        "productImage": "frappuccino-strawberry.jpg"
+    },
+    {
+        "id": 9,
+        "productName": "dark choco frappuccino",
+        "productPrice": 8.45,
+        "productSugarLevel": { 
+                                                "25%" : 25, 
+                                                "50%": 50, 
+                                                "75%": 75, 
+                                                "100%": 100 
+                                            },
+        "productSizes": { 
+                                    "small" : 0.8, 
+                                    "regular": 1, 
+                                    "medium": 1.2, 
+                                    "large": 1.5 
+                                },
+        "productQuantity": 1,
+        "productImage": "frappuccino-dark-choco.jpg"
+    },
+    {
+        "id": 10,
+        "productName": "marble mocha",
+        "productPrice": 7.25,
+        "productSugarLevel": { 
+                                                "25%" : 25, 
+                                                "50%": 50, 
+                                                "75%": 75, 
+                                                "100%": 100 
+                                            },
+        "productSizes": { 
+                                    "small" : 0.8, 
+                                    "regular": 1, 
+                                    "medium": 1.2, 
+                                    "large": 1.5 
+                                },
+        "productQuantity": 1,
+        "productImage": "mocha-marble.jpg"
+    },
+    {
+        "id": 11,
+        "productName": "iced mocha",
+        "productPrice": 6.25,
+        "productSugarLevel": { 
+                                                "25%" : 25, 
+                                                "50%": 50, 
+                                                "75%": 75, 
+                                                "100%": 100 
+                                            },
+        "productSizes": { 
+                                    "small" : 0.8, 
+                                    "regular": 1, 
+                                    "medium": 1.2, 
+                                    "large": 1.5 
+                                },
+        "productQuantity": 1,
+        "productImage": "mocha-iced.jpg"
+    },
+    {
+        "id": 12,
+        "productName": "white mocha",
+        "productPrice": 6.50,
+        "productSugarLevel": { 
+                                                "25%" : 25, 
+                                                "50%": 50, 
+                                                "75%": 75, 
+                                                "100%": 100 
+                                            },
+        "productSizes": { 
+                                    "small" : 0.8, 
+                                    "regular": 1, 
+                                    "medium": 1.2, 
+                                    "large": 1.5 
+                                },
+        "productQuantity": 1,
+        "productImage": "mocha-white.jpg"
+    },
+    {
+        "id": 13,
+        "productName": "espresso americano",
+        "productPrice": 5.50,
+        "productSugarLevel": { 
+                                                "25%" : 25, 
+                                                "50%": 50, 
+                                                "75%": 75, 
+                                                "100%": 100 
+                                            },
+        "productSizes": { 
+                                    "small" : 0.8, 
+                                    "regular": 1, 
+                                    "medium": 1.2, 
+                                    "large": 1.5 
+                                },
+        "productQuantity": 1,
+        "productImage": "americano-espresso.jpg"
+    },
+    {
+        "id": 14,
+        "productName": "flat white americano",
+        "productPrice": 6.75,
+        "productSugarLevel": { 
+                                                "25%" : 25, 
+                                                "50%": 50, 
+                                                "75%": 75, 
+                                                "100%": 100 
+                                            },
+        "productSizes": { 
+                                    "small" : 0.8, 
+                                    "regular": 1, 
+                                    "medium": 1.2, 
+                                    "large": 1.5 
+                                },
+        "productQuantity": 1,
+        "productImage": "americano-flat-white.jpg" 
+    },
+    {
+        "id": 15,
+        "productName": "mocha americano",
+        "productPrice": 6.50,
+        "productSugarLevel": { 
+                                                "25%" : 25, 
+                                                "50%": 50, 
+                                                "75%": 75, 
+                                                "100%": 100 
+                                            },
+        "productSizes": { 
+                                    "small" : 0.8, 
+                                    "regular": 1, 
+                                    "medium": 1.2, 
+                                    "large": 1.5 
+                                },
+        "productQuantity": 1,
+        "productImage": "americano-mocha.jpg"
+    }
+]

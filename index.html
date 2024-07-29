@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choffee | Home</title>
+    <link rel="stylesheet" href="Choffee-Home.css">
+    <link rel="shortcut icon" type="image/x-icon" href="ChoffeeImages/coffee-cup.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!-- Box Icon Embedded Code -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Sweet alert Embedded Code -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <!-- Header Homepage -->
+    <header>
+        <div class="announcement-container">
+            <p class="announcement">Choffee is now open! Come and visit us at our physical store from 8:00AM- 10:00PM. Located at Rodriguez, Rizal (Montalban) San Jose. For messages and reservation, kindly message us at our social media pages indicated below <span style="color: red;">&#10084;&#10084;&#10084;</span></p>
+        </div>
+    </header>
+    <!-- Navigations Content -->
+    <nav>
+        <div class="nav-items">
+            <img class="logo" src="ChoffeeImages/choffee-logo.png" alt="choffee-logo">
+            <div class="navigation-buttons">
+                <i class='bx bx-menu' id="menu-icon"></i>
+                <div class="navlinks" id="navlinks">
+                    <a href="Choffee-Home.html">Home</a>
+                    <a href="Choffee-About.html">About</a>
+                    <a href="Choffee-Menu.html">Menu</a>
+                </div>
+                <div class="user-btn-cntr">
+                    <button id="sign-up-btn" class="sign-up-btn">Sign up</button>
+                    <button id="login-btn" class="login-btn">Login</button>
+                    <button id="account-user-btn" class="account-user-btn">User</button>
+                </div>
+                <div class="user-settings" id="user-settings-cntr">
+                    <button class="user-sett-btn" id="my-cart-btn">My Cart</button>
+                    <button class="user-sett-btn" id="change-my-info-btn">Change my Info</button>
+                    <button class="user-sett-btn" id="log-out-btn">Logout</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Account User Settings -->
+    <section id="user-settings-section" class="user-settings-section">
+        <div class="user-settings-cntr">
+            <h1 class="change-my-info-title">Change My Info</h1>
+            <div class="input-and-label-cntr">
+                <div class="input-and-label">
+                    <label for="user-name-change-settings">User Name</label>
+                    <input type="text" id="user-name-change-settings">
+                </div>
+                <div class="input-and-label">
+                    <label for="password-change-settings">Password</label>
+                    <input type="password" id="password-change-settings">
+                </div>
+                <div class="input-and-label">
+                    <label for="first-name-change-settings">First Name</label>
+                    <input type="text" id="first-name-change-settings">
+                </div>
+                <div class="input-and-label">
+                    <label for="last-name-change-settings">Last Name</label>
+                    <input type="text" id="last-name-change-settings">
+                </div>
+                <div class="input-and-label">
+                    <label for="contact-number-change-settings">Contact Number</label>
+                    <input type="text" id="contact-number-change-settings">
+                </div>
+                <div class="input-and-label">
+                    <label for="email-address-change-settings">Email Address</label>
+                    <input id="email-address-change-settings" type="email">
+                </div>
+                <div class="input-and-label">
+                    <label for="street-number-change-settings">Street Number</label>
+                    <input type="text" class="address" id="street-number-change-settings">
+                </div>
+                <div class="input-and-label">
+                    <label for="city-change-settings">City</label>
+                    <input type="text" class="address" id="city-change-settings">
+                </div>
+                <div class="input-and-label">
+                    <label for="region-change-settings">Region</label>
+                    <input type="text" class="address" id="region-change-settings" >
+                </div>
+                <div class="input-and-label">
+                    <label for="zip-code-change-settings">Zip Code</label>
+                    <input type="text" class="address" id="zip-code-change-settings">
+                </div>
+            </div>
+            <div class="save-and-exit-btn">
+                <button class="save-changes change-btn" id="save-changes change-btn">Save Changes</button>
+                <button class="exit change-btn" id="exit-change-btn">Exit</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Section Hompage landing Content -->
+        <section id="homepage-section" class="homepage-section">
+
+            <!--Left Side of Main Content -->
+            <div id="homepage-cntr" class="homepage-cntr">
+                <div class="homepage-left">
+                    <img src="ChoffeeImages/japanese-theme-coffee-chop.jpg" alt="japanese-theme-coffee-chop" loading="eager">
+                    <p class="landing-page-left-intro">"Inspired by the delicate balance of Japanese craftsmanship and the rich aroma of freshly brewed coffee, we strive to create moments of serenity and satisfaction in every sip."</p>
+                </div>
+                
+                <!--Right Side of Main Content -->
+                <div class="homepage-right">
+
+                    <!--Introduction Right Side-->
+                    <div class="intro-container">
+                        <img src="ChoffeeImages/hot-coffee.jpg" alt="hot-coffee">
+                        <p class="intro-paragraph">Taking your coffee while experiencing <span class="japanes-word">"Japanese"</span> theme vibe!</p>
+                    </div>
+                    
+                    <!--Top Selling Right Side-->
+                    <div class="top-selling-cntr">
+                        <h1 class="top-selling-title-txt">Top Selling Product</h1>
+                        <div class="top-sell-prod-cntr">
+
+                            <div class="prod-cntr">
+                                <div class="prod-img">
+                                    <img src="ChoffeeImages/cappucino-vanilla.jfif" alt="cappucino-vanilla">
+                                </div>
+                                <div class="price-and-product-cntr">
+                                    <span class="prod-name">Vanilla Cappuccino</span>
+                                    <span class="prod-price">₱55.00</span>
+                                </div>
+                            </div>
+
+                            <div class="prod-cntr">
+                                <div class="prod-img">
+                                    <img src="ChoffeeImages/frappuccino-dark-choco.jpg" alt="frappuccino-dark-choco">
+                                </div>
+                                <div class="price-and-product-cntr">
+                                    <span class="prod-name">Dark Choco Frappuccino</span>
+                                    <span class="prod-price">₱69.50</span>
+                                </div>
+                            </div>
+
+                            <div class="prod-cntr">
+                                <div class="prod-img">
+                                    <img src="ChoffeeImages/mocha-white.jpg" alt="mocha-white">
+                                </div>
+                                <div class="price-and-product-cntr">
+                                    <span class="prod-name">Mocha White</span>
+                                    <span class="prod-price">₱55.50</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section Login or Signup Content -->
+        <section id="login-and-sign-up-section">
+           <div class="login-and-sign-up-cntr" id="login-and-sign-up-cntr">
+                <h1><span id="sign-or-log-txt">Log</span><span id="up-or-in-txt">In!</span></h1>
+                <!-- Signup Form -->
+                <form id="register-form">
+                    <div class="input-fields-cntr">
+                        
+                        <!-- Username -->
+                        <div class="register-inputs-cntr">
+                            <label for="user-name">User Name</label>
+                            <input type="text" id="user-name" placeholder="Username">
+                        </div>
+                        
+                        <!-- Password -->
+                        <div class="register-inputs-cntr">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" placeholder="Password">
+                        </div>
+
+                        <!-- Firstname -->
+                        <div class="register-inputs-cntr">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" placeholder="First Name">
+                        </div>
+                        
+                        <!-- Lastname -->
+                        <div class="register-inputs-cntr">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" placeholder="Last Name">
+                        </div>
+
+                        <!-- Mobile Number -->
+                        <div class="register-inputs-cntr">
+                            <label for="contact-number">Contact Number</label>
+                            <input type="text" id="contact-number" placeholder="Input Mobile Number (Ex. 09123456789)">
+                        </div>
+
+                        <!-- Email -->
+                        <div class="register-inputs-cntr">
+                            <label for="email-address">Email Address</label>
+                            <input id="email-address" type="email" placeholder="Email Address">
+                        </div>
+
+                        <!-- Street Number -->
+                        <div class="register-inputs-cntr">
+                            <label for="street-number">Street Number</label>
+                            <input type="text" class="address" id="street-number" placeholder="Street no#">
+                        </div>
+                        
+                        <!-- City -->
+                        <div class="register-inputs-cntr">
+                            <label for="city">City</label>
+                            <input type="text" class="address" id="city" placeholder="City (Ex: Quezon)">
+                        </div>
+                        
+                        <!-- Region -->
+                        <div class="register-inputs-cntr">
+                            <label for="region">Region</label>
+                            <input type="text" class="address" id="region" placeholder="Region (Ex: CALABARZON)">
+                        </div>
+                        
+                        <!-- Zipcode -->
+                        <div class="register-inputs-cntr">
+                            <label for="zip-code">Zip Code</label>
+                            <input type="text" class="address" id="zip-code" placeholder="Zip code/Postal">
+                        </div>
+
+                    </div>
+                    <button type="submit" id="submit">Create Account</button>
+                </form>
+                <!-- Login Form -->
+                <div id="login-form">
+
+                    <div class="login-input-fields-cntr">
+
+                        <!-- Username -->
+                        <div class="login-inputs-cntr">
+                            <label for="login-user-name">User Name</label>
+                            <input type="text" id="login-user-name" placeholder="Enter your Username">
+                        </div>
+
+                        <!-- Password -->
+                        <div class="login-inputs-cntr">
+                            <label for="login-password">Password</label>
+                            <input type="password" id="login-password" placeholder="Enter Your Password">
+                        </div>
+
+                        <button  id="show-hide-password">Show Password</button>
+
+                    </div>
+
+                    <span id="click-here-span">Doesn't have an account? <button id="click-here-button">Click here to register!</button></span>
+                    <button id="login-user-btn">Log in</button>
+                </div>
+           </div>
+            <svg id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 490" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(149, 106, 71, 1)" offset="0%"></stop><stop stop-color="rgba(218.892, 149.7, 93.38, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,245L120,269.5C240,294,480,343,720,302.2C960,261,1200,131,1440,122.5C1680,114,1920,229,2160,261.3C2400,294,2640,245,2880,228.7C3120,212,3360,229,3600,204.2C3840,180,4080,114,4320,98C4560,82,4800,114,5040,114.3C5280,114,5520,82,5760,73.5C6000,65,6240,82,6480,122.5C6720,163,6960,229,7200,253.2C7440,278,7680,261,7920,245C8160,229,8400,212,8640,212.3C8880,212,9120,229,9360,269.5C9600,310,9840,376,10080,343C10320,310,10560,180,10800,114.3C11040,49,11280,49,11520,65.3C11760,82,12000,114,12240,147C12480,180,12720,212,12960,253.2C13200,294,13440,343,13680,359.3C13920,376,14160,359,14400,294C14640,229,14880,114,15120,106.2C15360,98,15600,196,15840,204.2C16080,212,16320,131,16560,114.3C16800,98,17040,147,17160,171.5L17280,196L17280,490L17160,490C17040,490,16800,490,16560,490C16320,490,16080,490,15840,490C15600,490,15360,490,15120,490C14880,490,14640,490,14400,490C14160,490,13920,490,13680,490C13440,490,13200,490,12960,490C12720,490,12480,490,12240,490C12000,490,11760,490,11520,490C11280,490,11040,490,10800,490C10560,490,10320,490,10080,490C9840,490,9600,490,9360,490C9120,490,8880,490,8640,490C8400,490,8160,490,7920,490C7680,490,7440,490,7200,490C6960,490,6720,490,6480,490C6240,490,6000,490,5760,490C5520,490,5280,490,5040,490C4800,490,4560,490,4320,490C4080,490,3840,490,3600,490C3360,490,3120,490,2880,490C2640,490,2400,490,2160,490C1920,490,1680,490,1440,490C1200,490,960,490,720,490C480,490,240,490,120,490L0,490Z"></path></svg>
+        </section>
+    </main>
+    <!-- Footer Content -->
+    <footer>
+        <div class="footer-contents-container">
+            <!--  Social Media -->
+            <div class="social-media">
+                <h1 class="footer-titles social-media-title">connect with us</h1>
+                <div class="social-media-container">
+                    <a href="#"><i class="fa-brands fa-facebook"></i><span class="logo-title">Choffee24@email.com</span></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i><span class="logo-title">@Choffee24.twitter</span></a>
+                    <a href="#"><i class="fa-brands fa-square-instagram"></i><span class="logo-title">@Choffee24.insta</span></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i><span class="logo-title">Choffee.24</span></a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i><span class="logo-title">Choffee24@gmail.com</span></a>
+                </div>
+            </div>
+            <!--  Information -->
+            <div class="information">
+                <h1 class="footer-titles information-title">information</h1>
+                <span class="footer-contents information-content">Escape the hustle and bustle of the city and unwind in the serene ambiance of Choffee. Indulge in a delightful fusion of Japanese aesthetics and aromatic coffee, We offer a harmonious blend of traditional Japanese elements and contemporary design. Step into a realm where every sip is a journey through the tranquil landscapes of Japan, and every corner whispers the essence of Zen.</span>
+            </div>
+            <!--  Mission -->
+            <div class="our-mission">
+                <h1 class="footer-titles our-mission-title">our mission</h1>
+                <span class="footer-contents our-mission-content">Aims to create a peaceful and inviting space where customers can enjoy high-quality coffee in a setting inspired by traditional Japanese teahouses. With minimalist decor and cherry blossom accents, Choffee provides a serene atmosphere for guests to relax and connect. Through its commitment to craftsmanship and hospitality, Choffee strives to be a place where people can unwind, socialize, and experience the timeless charm of Japan.
+                </span>
+            </div>
+        </div>
+    </footer>
+    <script src="Choffee-Home.js"></script>
+</body>
+</html>

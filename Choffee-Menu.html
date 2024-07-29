@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choffee | Menu</title>
+    <link rel="stylesheet" href="Choffee-Menu.css">
+    <link rel="shortcut icon" type="x-icon" href="ChoffeeImages/coffee-cup.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script><!-- SweetAlert -->
+
+</head>
+<body>
+    <!-- Header Homepage -->
+    <header>
+        <div class="announcement-container">
+            <p class="announcement">Choffee is now open! Come and visit us at our physical store from 8:00AM- 10:00PM. Located at Rodriguez, Rizal (Montalban) San Jose. For messages and reservation, kindly message us at our social media pages indicated below <span style="color: red;">&#10084;&#10084;&#10084;</span></p>
+        </div>
+    </header>
+    <!-- Navigations Content -->
+    <nav class="nav">
+        <div class="nav-items">
+            <img class="logo" src="ChoffeeImages/choffee-logo.png" alt="choffee-logo">
+            <i class='bx bx-menu' id="menu-icon" onclick="toggleNavLinks()"></i>
+            <div class="navlinks" id="navlinks">
+                <a href="index.html">Home</a>
+                <a href="Choffee-About.html">About</a>
+                <a href="Choffee-Menu.html">Menu</a>
+            </div>
+            
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <h1>Our <span id="menu-word">Menu</span></h1>
+
+        
+        <button href="'#" id="my-cart"><i class="fa-solid fa-bag-shopping"></i><span id="order-notification-count">0</span></button>
+        <div class="cart-container" id="cart-container">
+            <div id="cart-order-container" class="cart-order-container">
+
+            </div>
+            <div class="cart-buttons-and-total-price">
+                <p id="total-price-of-orders" class="total-price-of-orders"></p>
+                <div class="cart-buttons">
+                    <button id="checkout-order">Checkout</button>
+                    <button id="close-cart">Close</button>
+                </div>
+            </div>
+        </div>
+
+        <section id="menu-container">
+            <div class="product-list-button">
+                <button id="product-icon" onclick="toggleMenuBar()">products</button>
+            </div>
+
+            <div class="menu-bar" id="menu-bar">
+
+                <div>
+                    <button id="Coffee-Category" onclick="displayAllProducts()"><h2 class="category-name">Coffee</h2></button>
+                </div>
+
+                <div>
+                    <button onclick="displayCappucinoCategory()"><h3 class="sub-category-name">Cappucino</h3></button>
+                    <button onclick="displayCappucinoVanillaItem() "><span class="product-name">vanilla cappucino</span></button>
+                    <button onclick="displayCappucinoCaramelItem()"><span class="product-name">caramel cappucino</span></button>
+                    <button onclick="displayCappucinoHazelnutItem() "><span class="product-name">hazelnut cappucino</span></button>
+                    <hr>
+                </div>
+
+                <div>
+                    <button onclick="displayLatteCategory()"><h3 class="sub-category-name">Latte</h3></button>
+                    <button onclick="displayLatteChocoItem()"><span class="product-name">choco latte</span></button>
+                    <button onclick="displayLatteCinnamonItem()"><span class="product-name">cinnamon latte</span></button>
+                    <button onclick="displayLattePumpkinItem()"><span class="product-name">pumpkin latte</span></button>
+                    <hr>
+                </div>
+
+                <div>
+                    <button onclick="displayFrappuccinoCategory()"><h3 class="sub-category-name">Frappuccino</h3></button>
+                    <button onclick="displayFrappuccinoCafeMocaItem()"><span class="product-name">cafe mocha Frappuccino</span></button>
+                    <button onclick="displayFrappuccinoStrawberryItem()"><span class="product-name">strawberry Frappuccino</span></button>
+                    <button onclick="displayFrappuccinoDarkChocoItem()"><span class="product-name">dark chocolate Frappuccino</span></button>
+                    <hr>
+                </div>
+
+                <div>
+                    <button onclick="displayMochaCategory()"><h3 class="sub-category-name">Mocha</h3></button>
+                    <button onclick="displayMochaMarbleItem()"><span class="product-name">marble mocha</span></button>
+                    <button onclick="displayMochaIcedItem()"><span class="product-name">iced mocha</span></button>
+                    <button onclick="displayMochaWhiteItem()"><span class="product-name">white mocha</span></button>
+                    <hr>
+                </div>
+
+                <div>
+                    <button onclick="displayAmericanoCategory()"><h3 class="sub-category-name">Americano</h3></button>
+                    <button onclick="displayAmericanoEspressoItem()"><span class="product-name">Espresso Americano</span></button>
+                    <button onclick="displayAmericanoFlatWhiteItem()"><span class="product-name">flat white americano</span></button>
+                    <button onclick="displayAmericanoMochaItem()"><span class="product-name">mocha americano</span></button>
+                </div>
+                
+            </div>
+
+            <div class="menu-field">
+                <div class="menu-products-path" id="product-category">
+                    <button class="product-path-links" id="product-path-all-items" onclick="displayAllProducts()">Coffee</button>
+                    <i class="fa-solid fa-greater-than" id="fa-greater-than-category"></i>
+                    <button class="product-path-links" id="product-path-category" onclick="productCategoryLink()"></button>
+                    <i class="fa-solid fa-greater-than" id="fa-greater-than-items"></i>
+                    <button class="product-path-links-item" id="product-path-item"></button>
+                </div>
+                <div class="products-main-container" id="products-main-container">
+
+                    <!-- cappuccino product field -->
+                    <div id="product-cappucino-vanilla" class="cappucino product-container" value="1">
+                        <img id="product-image" src="ChoffeeImages/cappucino-vanilla.jfif" alt="vanilla cappucino">
+                        <div class="product-name-and-price-container">
+                            <span id="menu-field-product-name">vanilla cappucino</span>
+                            <div class="product-price-container">
+                                <span class="peso-sign">₱</span><span class="product-price" id="cappucino-vanilla-price">55.00</span>
+                            </div>
+                        </div>
+                        <span id="menu-field-product-description">The perfect balance of espresso, steamed milk and foam.</span>
+                        <div class="product-customization">
+                            <div class="customizations-factors-container" id="customizations-factors-container-cappucino-vanilla">
+                                <div class="sugar-level-container customization-container">
+                                    <label class="customization-title" for="sugar-level-option-cappucino-vanilla">Sugar Level :</label>
+                                    <select name="sugar-levels" class="sugar-level-option-select-tag" id="sugar-level-option-cappucino-vanilla">
+                                        <option value="25">25 percent</option>
+                                        <option value="50" selected>50 percent</option>
+                                        <option value="75">75 percent</option>
+                                        <option value="100">100 percent</option>
+                                    </select>
+                                </div>
+                                <div class="sizes-container customization-container">
+                                    <label class="customization-title sizes" for="cappucinno-vanilla-sizes">Sizes :</label>
+                                    <select id="cappucinno-vanilla-sizes" name="cappucino-vanilla-sizes">
+                                        <option value="0.85">Small</option>
+                                        <option value="1" selected>Regular</option>
+                                        <option value="1.15">Medium</option>
+                                        <option value="1.3">Large</option>
+                                    </select>
+                                </div>
+                                <div class="quantity-container customization-container">
+                                    <label for="vanilla-cappucino-quantity" class="customization-title quantity">Quantity :</label>
+                                    <div class="product-quantity">
+                                        <button class="product-quantity-element-decrease" id="product-quantity-decrease-vanilla-cappucino"><i class="fa-solid fa-minus"></i></button>
+                                        <input class="product-quantity-element" id="vanilla-cappucino-quantity" type="text" value="1" readonly>
+                                        <button class="product-quantity-element-increase" id="product-quantity-increase-vanilla-cappucino"><i class="fa-solid fa-plus"></i></button>
+                                    </div>
+                               </div>
+                            </div>
+                        </div>
+                        <button class="add-to-cart" id="add-btn-cappucino-vanilla">Add to cart</button>
+                    </div>
+
+                    <!-- cappuccino product field -->
+                    <div id="product-cappucino-caramel" class="cappucino product-container " value="2">
+                        <img id="product-image" src="ChoffeeImages/cappucino-caramel.jfif" alt="">
+                        <div class="product-name-and-price-container">
+                            <span id="menu-field-product-name">caramel cappucino</span>
+                            <div class="product-price-container">
+                                <span class="peso-sign">₱</span><span class="product-price" id="cappucino-caramel-price">60.00</span>
+                            </div>
+                        </div>
+                        <span id="menu-field-product-description">Consists of equal parts of espresso, steamed milk, and milk foam, with caramel syrup.</span>
+                        <div class="product-customization">
+                            <div class="customizations-factors-container" id="customizations-factors-container-cappucino-caramel">
+                                <div class="sugar-level-container customization-container">
+                                    <label class="customization-title" for="sugar-level-option-cappucino-caramel">Sugar Level :</label>
+                                    <select name="sugar-levels" class="sugar-level-option-select-tag" id="sugar-level-option-cappucino-caramel">
+                                        <option value="25">25 percent</option>
+                                        <option value="50" selected>50 percent</option>
+                                        <option value="75">75 percent</option>
+                                        <option value="100">100 percent</option>
+                                    </select>
+                                </div>
+                                <div class="sizes-container customization-container">
+                                    <label class="customization-title sizes" for="cappucinno-caramel-sizes">Sizes :</label>
+                                    <select id="cappucinno-caramel-sizes" name="cappucinno-caramel-sizes">
+                                        <option value="0.85">Small</option>
+                                        <option value="1" selected>Regular</option>
+                                        <option value="1.15">Medium</option>
+                                        <option value="1.3">Large</option>
+                                    </select>
+                                </div>
+                                <div class="quantity-container customization-container">
+                                    <label for="cappucino-caramel-quantity" class="customization-title quantity">Quantity :</label>
+                                    <div class="product-quantity">
+                                        <button class="product-quantity-element-decrease" id="product-quantity-decrease-cappucino-caramel"><i class="fa-solid fa-minus"></i></button>
+                                        <input class="product-quantity-element" id="cappucino-caramel-quantity" type="text" value="1" readonly>
+                                        <button class="product-quantity-element-increase" id="product-quantity-increase-cappucino-caramel"><i class="fa-solid fa-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="add-to-cart" id="add-btn-cappucino-caramel">Add to cart</button>
+                    </div>
+
+                    <!-- cappuccino product field -->
+                    <div id="product-cappucino-hazelnut" class="cappucino product-container">
+                        <img id="product-image" src="ChoffeeImages/cappucino-hazelnut.jpg" alt="">
+                        <div class="product-name-and-price-container">
+                            <span id="menu-field-product-name">hazelnut cappucino</span>
+                            <div class="product-price-container">
+                                <span class="peso-sign">₱</span><span class="product-price" id="cappucino-hazelnut-price">62.75</span>
+                            </div>
+                        </div>
+                        <span id="menu-field-product-description">Combined espresso, steamed milk, and milk foam, just like a traditional cappuccino, with the addition of hazelnut flavoring.</span>
+                        <div class="product-customization">
+                            <div class="customizations-factors-container" id="customizations-factors-container-cappucino-hazelnut">
+                                <div class="sugar-level-container customization-container">
+                                    <label class="customization-title" for="sugar-level-option-cappucino-hazelnut">Sugar Level :</label>
+                                    <select name="sugar-levels" class="sugar-level-option-select-tag" id="sugar-level-option-cappucino-hazelnut">
+                                        <option value="25">25 percent</option>
+                                        <option value="50" selected>50 percent</option>
+                                        <option value="75">75 percent</option>
+                                        <option value="100">100 percent</option>
+                                    </select>
+                                </div>
+                                <div class="sizes-container customization-container">
+                                    <label class="customization-title sizes" for="cappucinno-hazelnut-sizes">Sizes :</label>
+                                    <select id="cappucinno-hazelnut-sizes" name="cappucinno-hazelnut-sizes">
+                                        <option value="0.85">Small</option>
+                                        <option value="1" selected>Regular</option>
+                                        <option value="1.15">Medium</option>
+                                        <option value="1.3">Large</option>
+                                    </select>
+                                </div>
+                                <div class="quantity-container customization-container">
+                                    <label for="cappucino-hazelnut-quantity" class="customization-title quantity">Quantity :</label>
+                                    <div class="product-quantity">
+                                        <button class="product-quantity-element-decrease" id="product-quantity-decrease-cappucino-hazelnut"><i class="fa-solid fa-minus"></i></button>
+                                        <input class="product-quantity-element" id="cappucino-hazelnut-quantity" type="text" value="1" readonly>
+                                        <button class="product-quantity-element-increase" id="product-quantity-increase-cappucino-hazelnut"><i class="fa-solid fa-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="add-to-cart" id="add-btn-cappucino-hazelnut">Add to cart</button>
+                    </div>
+
+                    <!-- latte product field -->
+                    <div id="product-latte-choco" class="latte product-container">
+                        <img id="product-image" src="ChoffeeImages/latte-choco.jpg" alt="">
+                        <div class="product-name-and-price-container">
+                            <span id="menu-field-product-name">Choco latte</span>
+                            <div class="product-price-container">
+                                <span class="peso-sign">₱</span><span class="product-price" id="latte-choco-price">70.00</span>
+                            </div>
+                        </div>
+                        <span id="menu-field-product-description">Delicious coffee beverage that combines espresso, steamed milk, and cocoa powder as chocolate flavoring.</span>
+                        <div class="product-customization">
+                            <div class="customizations-factors-container" id="customizations-factors-container-latte-choco">
+                                <div class="sugar-level-container customization-container">
+                                    <label class="customization-title" for="sugar-level-option-latte-choco">Sugar Level :</label>
+                                    <select name="sugar-levels" class="sugar-level-option-select-tag" id="sugar-level-option-latte-choco">
+                                        <option value="25">25 percent</option>
+                                        <option value="50" selected>50 percent</option>
+                                        <option value="75">75 percent</option>
+                                        <option value="100">100 percent</option>
+                                    </select>
+                                </div>
+                                <div class="sizes-container customization-container">
+                                    <label class="customization-title sizes" for="latte-choco-sizes">Sizes :</label>
+                                    <select id="latte-choco-sizes" name="latte-choco-sizes">
+                                        <option value="0.85">Small</option>
+                                        <option value="1" selected>Regular</option>
+                                        <option value="1.15">Medium</option>
+                                        <option value="1.3">Large</option>
+                                    </select>
+                                </div>
+                                <div class="quantity-container customization-container">
+                                    <label for="latte-choco-quantity" class="customization-title quantity">Quantity :</label>
+                                    <div class="product-quantity">
+                                        <button class="product-quantity-element-decrease" id="product-quantity-decrease-latte-choco"><i class="fa-solid fa-minus"></i></button>
+                                        <input class="product-quantity-element" id="latte-choco-quantity" type="text" value="1" readonly>
+                                        <button class="product-quantity-element-increase" id="product-quantity-increase-latte-choco"><i class="fa-solid fa-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                       <button class="add-to-cart" id="add-btn-latte-choco">Add to cart</button>
+                    </div>
+
+                    <!-- latte product field -->
+                    <div id="product-latte-cinnamon" class="latte product-container">
+                        <img id="product-image" src="ChoffeeImages/latte-cinnamon.jpg" alt="">
+                        <div class="product-name-and-price-container">
+                            <span id="menu-field-product-name">Cinammon latte</span>
+                            <div class="product-price-container">
+                                <span class="peso-sign">₱</span><span class="product-price" id="latte-cinnamon-price">70.25</span>
+                            </div>
+                        </div>
+                        <span id="menu-field-product-description">Sweet, creamy, and frothy,  infused with warm cinnamon spice and finished with whipped cream and cinnamon.</span>
+                        <div class="product-customization">
+                            <div class="customizations-factors-container" id="customizations-factors-container-latte-cinnamon">
+                                <div class="sugar-level-container customization-container">
+                                    <label class="customization-title" for="sugar-level-option-latte-cinnamon">Sugar Level :</label>
+                                    <select name="sugar-levels" class="sugar-level-option-select-tag" id="sugar-level-option-latte-cinnamon">
+                                        <option value="25">25 percent</option>
+                                        <option value="50" selected>50 percent</option>
+                                        <option value="75">75 percent</option>
+                                        <option value="100">100 percent</option>
+                                    </select>
+                                </div>
+                                <div class="sizes-container customization-container">
+                                    <label class="customization-title sizes" for="latte-cinnamon-sizes">Sizes :</label>
+                                    <select id="latte-cinnamon-sizes" name="latte-cinnamon-sizes">
+                                        <option value="0.85">Small</option>
+                                        <option value="1" selected>Regular</option>
+                                        <option value="1.15">Medium</option>
+                                        <option value="1.3">Large</option>
+                                    </select>
+                                </div>
+                                <div class="quantity-container customization-container">
+                                    <label for="latte-cinnamon-quantity" class="customization-title quantity">Quantity :</label>
+                                    <div class="product-quantity">
+                                        <button class="product-quantity-element-decrease" id="product-quantity-decrease-latte-cinnamon"><i class="fa-solid fa-minus"></i></button>
+                                        <input class="product-quantity-element" id="latte-cinnamon-quantity" type="text" value="1" readonly>
+                                        <button class="product-quantity-element-increase" id="product-quantity-increase-latte-cinnamon"><i class="fa-solid fa-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                        <button class="add-to-cart" id="add-btn-latte-cinnamon">Add to cart</button>
+                    </div>
+
+                    <!-- latte product field -->
+                    <div id="product-latte-pumpkin" class="latte product-container">
+                        <img id="product-image" src="ChoffeeImages/latte-pumpkin.jpg" alt="">
+                        <div class="product-name-and-price-container">
+                            <span id="menu-field-product-name">Pumpkin latte</span>
+                            <div class="product-price-container">
+                                <span class="peso-sign">₱</span><span class="product-price" id="latte-pumpkin-price">67.75</span>
+                            </div>
+                        </div>
+                        <span id="menu-field-product-description">Made with a mix of traditional fall spice flavors (cinnamon, nutmeg, and clove), steamed milk, espresso, and often sugar, topped with whipped cream and pumpkin pie spice.</span>
+                        <div class="product-customization">
+                            <div class="customizations-factors-container" id="customizations-factors-container-latte-pumpkin">
+                                <div class="sugar-level-container customization-container">
+                                    <label class="customization-title" for="sugar-level-option-latte-pumpkin">Sugar Level :</label>
+                                    <select name="sugar-levels" class="sugar-level-option-select-tag" id="sugar-level-option-latte-pumpkin">
+                                        <option value="25">25 percent</option>
+                                        <option value="50" selected>50 percent</option>
+                                        <option value="75">75 percent</option>
+                                        <option value="100">100 percent</option>
+                                    </select>
+                               </div>
+                                <div class="sizes-container customization-container">
+                                    <label class="customization-title sizes" for="latte-pumpkin-sizes">Sizes :</label>
+                                    <select id="latte-pumpkin-sizes" name="latte-pumpkin-sizes">
+                                        <option value="0.85">Small</option>
+                                        <option value="1" selected>Regular</option>
+                                        <option value="1.15">Medium</option>
+                                        <option value="1.3">Large</option>
+                                    </select>
+                                </div>
+                                <div class="quantity-container customization-container">
+                                    <label for="latte-pumpkin-quantity" class="customization-title quantity">Quantity :</label>
+                                    <div class="product-quantity">
+                                        <button class="product-quantity-element-decrease" id="product-quantity-decrease-latte-pumpkin"><i class="fa-solid fa-minus"></i></button>
+                                        <input class="product-quantity-element" id="latte-pumpkin-quantity" type="text" value="1" readonly>
+                                        <button class="product-quantity-element-increase" id="product-quantity-increase-latte-pumpkin"><i class="fa-solid fa-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="add-to-cart" id="add-btn-latte-pumpkin">Add to cart</button>
+                    </div>
+
+                    <!-- frappuccino product field -->
+                    <div id="product-frappuccino-cafe-mocha" class="frappucino product-container">
+                        <img id="product-image" src="ChoffeeImages/frappuccino-cafe-mocha.jpg" alt="">
+                        <div class="product-name-and-price-container">
+                            <span id="menu-field-product-name">cafe mocha frappuccino</span>
+                            <div class="product-price-container">
+                                <span class="peso-sign">₱</span><span class="product-price" id="frappuccino-cafe-mocha-price">68.00</span>
+                            </div>
+                        </div>
+                        <span id="menu-field-product-description">Smooth coffee drink that is made with espresso, milk, chocolate syrup, and ice.</span>
+                        <div class="product-customization">
+                            <div class="customizations-factors-container" id="customizations-factors-container-frappuccino-cafe-mocha">
+                                <div class="sugar-level-container customization-container">
+                                    <label class="customization-title" for="sugar-level-option-frappuccino-cafe-mocha">Sugar Level :</label>
+                                    <select name="sugar-levels" class="sugar-level-option-select-tag" id="sugar-level-option-frappuccino-cafe-mocha">
+                                        <option value="25">25 percent</option>
+                                        <option value="50" selected>50 percent</option>
+                                        <option value="75">75 percent</option>
+                                        <option value="100">100 percent</option>
+                                    </select>
+                                </div>
+                                <div class="sizes-container customization-container">
+                                    <label class="customization-title sizes" for="frappuccino-cafe-mocha-sizes">Sizes :</label>
+                                    <select id="frappuccino-cafe-mocha-sizes" name="frappuccino-cafe-mocha-sizes">
+                                        <option value="0.85">Small</option>
+                                        <option value="1" selected>Regular</option>
+                                        <option value="1.15">Medium</option>
+                                        <option value="1.3">Large</option>
+                                    </select>
+                                </div>
+                                <div class="quantity-container customization-container">
+                                    <label for="frappuccino-cafe-mocha-quantity" class="customization-title quantity">Quantity :</label>
+                                    <div class="product-quantity">
+                                        <button class="product-quantity-element-decrease" id="product-quantity-decrease-frappuccino-cafe-mocha"><i class="fa-solid fa-minus"></i></button>
+                                        <input class="product-quantity-element" id="frappuccino-cafe-mocha-quantity" type="text" value="1" readonly>
+                                        <button class="product-quantity-element-increase" id="product-quantity-increase-frappuccino-cafe-mocha"><i class="fa-solid fa-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="add-to-cart" id="add-btn-frappuccino-cafe-mocha">Add to cart</button>
+                    </div>
+
+                    <!-- frappuccino product field -->
+                    <div id="product-frappuccino-strawberry" class="frappucino product-container">
+                        <img id="product-image" src="ChoffeeImages/frappuccino-strawberry.jpg" alt="">
+                        <div class="product-name-and-price-container">
+                            <span id="menu-field-product-name">strawberry frappuccino</span>
+                            <div class="product-price-container">
+                                <span class="peso-sign">₱</span><span class="product-price" id="frappuccino-strawberry-price">68.25</span>
+                            </div>
+                        </div>
+                        <span id="menu-field-product-description">A refreshing, coffee-free, creme frappuccino made with strawberry puree, ice cream, and milk with whipped cream on top.</span>
+                        <div class="product-customization">
+                            <div class="customizations-factors-container" id="customizations-factors-container-frappuccino-strawberry">
+                                <div class="sugar-level-container customization-container">
+                                    <label class="customization-title" for="sugar-level-option-frappuccino-strawberry">Sugar Level :</label>
+                                    <select name="sugar-levels" class="sugar-level-option-select-tag" id="sugar-level-option-frappuccino-strawberry">
+                                        <option value="25">25 percent</option>
+                                        <option value="50" selected>50 percent</option>
+                                        <option value="75">75 percent</option>
+                                        <option value="100">100 percent</option>
+                                    </select>
+                                </div>
+                                <div class="sizes-container customization-container">
+                                    <label class="customization-title sizes" for="frappuccino-strawberry-sizes">Sizes :</label>
+                                    <select id="frappuccino-strawberry-sizes" name="frappuccino-strawberry-sizes">
+                                        <option value="0.85">Small</option>
+                                        <option value="1" selected>Regular</option>
+                                        <option value="1.15">Medium</option>
+                                        <option value="1.3">Large</option>
+                                    </select>
+                                </div>
+                                <div class="quantity-container customization-container">
+                                    <label for="frappuccino-strawberry-quantity" class="customization-title quantity">Quantity :</label>
+                                    <div class="product-quantity">
+                                        <button class="product-quantity-element-decrease" id="product-quantity-decrease-frappuccino-strawberry"><i class="fa-solid fa-minus"></i></button>
+                                        <input class="product-quantity-element" id="frappuccino-strawberry-quantity" type="text" value="1" readonly>
+                                        <button class="product-quantity-element-increase" id="product-quantity-increase-frappuccino-strawberry"><i class="fa-solid fa-plus"></i></button>
+                                    </div>
+                               </div>
+                            </div>
+                        </div>
+                        <button class="add-to-cart" id="add-btn-frappuccino-strawberry">Add to cart</button>
+                    </div>
+
+                    <!-- frappuccino product field -->
+                    <div id="product-frappuccino-dark-choco" class="frappucino product-container">
+                        <img id="product-image" src="ChoffeeImages/frappuccino-dark-choco.jpg" alt="">
+                        <div class="product-name-and-price-container">
+                            <span id="menu-field-product-name">dark choco frappuccino</span>
+                            <div class="product-price-container">
+                                <span class="peso-sign">₱</span><span class="product-price" id="frappuccino-dark-choco-price">69.50</span>
+                            </div>
+                        </div>
+                        <span id="menu-field-product-description">Blended dark cocoa with milk, ice and coffee topped with a swirl of whipped cream.</span>
+                        <div class="product-customization">
+                            <div class="customizations-factors-container" id="customizations-factors-container-frappuccino-dark-choco">
+                                <div class="sugar-level-container customization-container">
+                                    <label class="customization-title" for="sugar-level-option-frappuccino-dark-choco">Sugar Level :</label>
+                                    <select name="sugar-levels" class="sugar-level-option-select-tag" id="sugar-level-option-frappuccino-dark-choco">
+                                        <option value="25">25 percent</option>
+                                        <option value="50" selected>50 percent</option>
+                                        <option value="75">75 percent</option>
+                                        <option value="100">100 percent</option>
+                                    </select>
+                                </div>
+                                <div class="sizes-container customization-container">
+                                    <label class="customization-title sizes" for="frappuccino-dark-choco-sizes">Sizes :</label>
+                                    <select id="frappuccino-dark-choco-sizes" name="frappuccino-dark-choco-sizes">
+                                        <option value="0.85">Small</option>
+                                        <option value="1" selected>Regular</option>
+                                        <option value="1.15">Medium</option>
+                                        <option value="1.3">Large</option>
+                                    </select>
+                                </div>
+                                <div class="quantity-container customization-container">
+                                    <label for="frappuccino-dark-choco-quantity" class="customization-title quantity">Quantity :</label>
+                                    <div class="product-quantity">
+                                        <button class="product-quantity-element-decrease" id="product-quantity-decrease-frappuccino-dark-choco"><i class="fa-solid fa-minus"></i></button>
+                                        <input class="product-quantity-element" id="frappuccino-dark-choco-quantity" type="text" value="1" readonly>
+                                        <button class="product-quantity-element-increase" id="product-quantity-increase-frappuccino-dark-choco"><i class="fa-solid fa-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="add-to-cart" id="add-btn-frappuccino-dark-choco">Add to cart</button>
+                    </div>
+
+                    <!-- mocha product field -->
+                    <div id="product-mocha-marble"  class="mocha product-container">
+                        <img id="product-image" src="ChoffeeImages/mocha-marble.jpg" alt="">
+                        <div class="product-name-and-price-container">
+                            <span id="menu-field-product-name">marble mocha</span>
+                            <div class="product-price-container">
+                                <span class="peso-sign">₱</span><span class="product-price" id="mocha-marble-price">67.25</span>
+                            </div>
+                        </div>
+                        <span id="menu-field-product-description">Combination of cafe mocha and a white chocolate mocha giving off subtle tastes of coffee with a chocolate explosion.</span>
+                        <div class="product-customization">
+                            <div class="customizations-factors-container" id="customizations-factors-container-mocha-marble">
+                                <div class="sugar-level-container customization-container">
+                                    <label class="customization-title" for="sugar-level-option-mocha-marble">Sugar Level :</label>
+                                    <select name="sugar-levels" class="sugar-level-option-select-tag" id="sugar-level-option-mocha-marble">
+                                        <option value="25">25 percent</option>
+                                        <option value="50" selected>50 percent</option>
+                                        <option value="75">75 percent</option>
+                                        <option value="100">100 percent</option>
+                                    </select>
+                                </div>
+                                <div class="sizes-container customization-container">
+                                    <label class="customization-title sizes" for="mocha-marble-sizes">Sizes :</label>
+                                    <select id="mocha-marble-sizes" name="mocha-marble-sizes">
+                                        <option value="0.85">Small</option>
+                                        <option value="1" selected>Regular</option>
+                                        <option value="1.15">Medium</option>
+                                        <option value="1.3">Large</option>
+                                    </select>
+                                </div>
+                                <div class="quantity-container customization-container">
+                                    <label for="mocha-marble-quantity" class="customization-title quantity">Quantity :</label>
+                                    <div class="product-quantity">
+                                        <button class="product-quantity-element-decrease" id="product-quantity-decrease-mocha-marble"><i class="fa-solid fa-minus"></i></button>
+                                        <input class="product-quantity-element" id="mocha-marble-quantity" type="text" value="1" readonly>
+                                        <button class="product-quantity-element-increase" id="product-quantity-increase-mocha-marble"><i class="fa-solid fa-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <button class="add-to-cart" id="add-btn-mocha-marble">Add to cart</button>
+                    </div>
+
+                    <!-- mocha product field -->
+                    <div id="product-iced-mocha" class="mocha product-container">
+                        <img id="product-image" src="ChoffeeImages/mocha-iced.jpg" alt="">
+                        <div class="product-name-and-price-container">
+                            <span id="menu-field-product-name">iced mocha</span>
+                            <div class="product-price-container">
+                                <span class="peso-sign">₱</span><span class="product-price" id="mocha-iced-price">59.25</span>
+                            </div>
+                        </div>
+                        <span id="menu-field-product-description">Ice -cold, chocolatey coffee.</span>
+                        <div class="product-customization">
+                            <div class="customizations-factors-container" id="customizations-factors-container-mocha-iced">
+                                <div class="sugar-level-container customization-container">
+                                    <label class="customization-title" for="sugar-level-option-mocha-iced">Sugar Level :</label>
+                                    <select name="sugar-levels" class="sugar-level-option-select-tag" id="sugar-level-option-mocha-iced">
+                                        <option value="25">25 percent</option>
+                                        <option value="50" selected>50 percent</option>
+                                        <option value="75">75 percent</option>
+                                        <option value="100">100 percent</option>
+                                    </select>
+                                </div>
+                                <div class="sizes-container customization-container">
+                                    <label class="customization-title sizes" for="mocha-iced-sizes">Sizes :</label>
+                                    <select id="mocha-iced-sizes" name="mocha-iced-sizes">
+                                        <option value="0.85">Small</option>
+                                        <option value="1" selected>Regular</option>
+                                        <option value="1.15">Medium</option>
+                                        <option value="1.3">Large</option>
+                                    </select>
+                                </div>
+                                <div class="quantity-container customization-container">
+                                    <label for="mocha-iced-quantity" class="customization-title quantity">Quantity :</label>
+                                    <div class="product-quantity">
+                                        <button class="product-quantity-element-decrease" id="product-quantity-decrease-mocha-iced"><i class="fa-solid fa-minus"></i></button>
+                                        <input class="product-quantity-element" id="mocha-iced-quantity" type="text" value="1" readonly>
+                                        <button class="product-quantity-element-increase" id="product-quantity-increase-mocha-iced"><i class="fa-solid fa-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="add-to-cart"id="add-btn-mocha-iced">Add to cart</button>
+                    </div>
+
+                    <!-- mocha product field -->
+                    <div id="product-mocha-white" class="mocha product-container">
+                        <img id="product-image" src="ChoffeeImages/mocha-white.jpg" alt="">
+                        <div class="product-name-and-price-container">
+                            <span id="menu-field-product-name">white mocha</span>
+                            <div class="product-price-container">
+                                <span class="peso-sign">₱</span><span class="product-price" id="mocha-white-price">55.50</span>
+                            </div>
+                        </div>
+                        <span id="menu-field-product-description">A blend of espresso coffee, white chocolate and milk.</span>
+                        <div class="product-customization">
+                            <div class="customizations-factors-container" id="customizations-factors-container-mocha-white">
+                                <div class="sugar-level-container customization-container">
+                                    <label class="customization-title" for="sugar-level-option-mocha-white">Sugar Level :</label>
+                                    <select name="sugar-levels" class="sugar-level-option-select-tag" id="sugar-level-option-mocha-white">
+                                        <option value="25">25 percent</option>
+                                        <option value="50" selected>50 percent</option>
+                                        <option value="75">75 percent</option>
+                                        <option value="100">100 percent</option>
+                                    </select>
+                                </div>
+                                <div class="sizes-container customization-container">
+                                    <label class="customization-title sizes" for="mocha-white-sizes">Sizes :</label>
+                                    <select id="mocha-white-sizes" name="mocha-white-sizes">
+                                        <option value="0.85">Small</option>
+                                        <option value="1" selected>Regular</option>
+                                        <option value="1.15">Medium</option>
+                                        <option value="1.3">Large</option>
+                                    </select>
+                                </div>
+                                <div class="quantity-container customization-container">
+                                    <label for="mocha-white-quantity" class="customization-title quantity">Quantity :</label>
+                                    <div class="product-quantity">
+                                        <button class="product-quantity-element-decrease" id="product-quantity-decrease-mocha-white"><i class="fa-solid fa-minus"></i></button>
+                                        <input class="product-quantity-element" id="mocha-white-quantity" type="text" value="1" readonly>
+                                        <button class="product-quantity-element-increase" id="product-quantity-increase-mocha-white"><i class="fa-solid fa-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="add-to-cart" id="add-btn-mocha-white">Add to cart</button>
+                    </div>
+
+                    <!-- americano product field -->
+                    <div id="product-americano-espresso" class="americano product-container">
+                        <img id="product-image" src="ChoffeeImages/americano-espresso.jpg" alt="">
+                        <div class="product-name-and-price-container">
+                            <span id="menu-field-product-name">americano espresso</span>
+                            <div class="product-price-container">
+                                <span class="peso-sign">₱</span><span class="product-price" id="americano-espresso-price">65.50</span>
+                            </div>
+                        </div>
+                        <span id="menu-field-product-description">Espresso topped with hot water.</span>
+                        <div class="product-customization">
+                            <div class="customizations-factors-container" id="customizations-factors-container-americano-espresso">
+                                <div class="sugar-level-container customization-container">
+                                    <label class="customization-title" for="sugar-level-option-americano-espresso">Sugar Level :</label>
+                                    <select name="sugar-levels" class="sugar-level-option-select-tag" id="sugar-level-option-americano-espresso">
+                                        <option value="25">25 percent</option>
+                                        <option value="50" selected>50 percent</option>
+                                        <option value="75">75 percent</option>
+                                        <option value="100">100 percent</option>
+                                    </select>
+                                </div>
+                                <div class="sizes-container customization-container">
+                                    <label class="customization-title sizes" for="americano-espresso-sizes">Sizes :</label>
+                                    <select id="americano-espresso-sizes" name="americano-espresso-sizes">
+                                        <option value="0.85">Small</option>
+                                        <option value="1" selected>Regular</option>
+                                        <option value="1.15">Medium</option>
+                                        <option value="1.3">Large</option>
+                                    </select>
+                                </div>
+                                <div class="quantity-container customization-container">
+                                    <label for="americano-espresso-quantity" class="customization-title quantity">Quantity :</label>
+                                    <div class="product-quantity">
+                                        <button class="product-quantity-element-decrease" id="product-quantity-decrease-americano-espresso"><i class="fa-solid fa-minus"></i></button>
+                                        <input class="product-quantity-element" id="americano-espresso-quantity" type="text" value="1" readonly>
+                                        <button class="product-quantity-element-increase" id="product-quantity-increase-americano-espresso"><i class="fa-solid fa-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="add-to-cart" id="add-btn-americano-espresso">Add to cart</button>
+                    </div>
+
+                    <!-- americano product field -->
+                    <div id="product-americano-flat-white" class="americano product-container">
+                        <img id="product-image" src="ChoffeeImages/americano-flat-white.jpg" alt="">
+                        <div class="product-name-and-price-container">
+                            <span id="menu-field-product-name">americano flat white</span>
+                            <div class="product-price-container">
+                                <span class="peso-sign">₱</span><span class="product-price" id="americano-flat-white-price">66.75</span>
+                            </div>
+                        </div>
+                        <span id="menu-field-product-description">A milk-based beverage while Americano is purely espresso-based.</span>
+                        <div class="product-customization">
+                            <div class="customizations-factors-container" id="customizations-factors-container-americano-flat-white">
+                                <div class="sugar-level-container customization-container">
+                                    <label class="customization-title" for="sugar-level-option-americano-flat-white">Sugar Level :</label>
+                                    <select name="sugar-levels" class="sugar-level-option-select-tag" id="sugar-level-option-americano-flat-white">
+                                        <option value="25">25 percent</option>
+                                        <option value="50" selected>50 percent</option>
+                                        <option value="75">75 percent</option>
+                                        <option value="100">100 percent</option>
+                                    </select>
+                                </div>
+                                <div class="sizes-container customization-container">
+                                    <label class="customization-title sizes" for="americano-flat-white-sizes">Sizes :</label>
+                                    <select id="americano-flat-white-sizes" name="americano-flat-white-sizes">
+                                        <option value="0.85">Small</option>
+                                        <option value="1" selected>Regular</option>
+                                        <option value="1.15">Medium</option>
+                                        <option value="1.3">Large</option>
+                                    </select>
+                                </div>
+                                <div class="quantity-container customization-container">
+                                    <label for="americano-flat-white-quantity" class="customization-title quantity">Quantity :</label>
+                                    <div class="product-quantity">
+                                        <button class="product-quantity-element-decrease" id="product-quantity-decrease-americano-flat-white"><i class="fa-solid fa-minus"></i></button>
+                                        <input class="product-quantity-element" id="americano-flat-white-quantity" type="text" value="1" readonly>
+                                        <button class="product-quantity-element-increase" id="product-quantity-increase-americano-flat-white"><i class="fa-solid fa-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="add-to-cart" id="add-btn-americano-flat-white">Add to cart</button>
+                    </div>
+
+                    <!-- americano product field -->
+                    <div id="product-americano-mocha" class="americano product-container">
+                        <img id="product-image" src="ChoffeeImages/americano-mocha.jpg" alt="">
+                        <div class="product-name-and-price-container">
+                            <span id="menu-field-product-name">americano mocha</span>
+                            <div class="product-price-container">
+                                <span class="peso-sign">₱</span><span class="product-price" id="americano-mocha-price">62.50</span>
+                            </div>
+                        </div>
+                        <span id="menu-field-product-description">An espresso and hot milk with added cocoa chocolate flavoring and sweetener.</span>
+                        <div class="product-customization">
+                            <div class="customizations-factors-container" id="customizations-factors-container-americano-mocha">
+                                <div class="sugar-level-container customization-container">
+                                    <label class="customization-title" for="sugar-level-option-americano-mocha">Sugar Level :</label>
+                                    <select name="sugar-levels" class="sugar-level-option-select-tag" id="sugar-level-option-americano-mocha">
+                                        <option value="25">25 percent</option>
+                                        <option value="50" selected>50 percent</option>
+                                        <option value="75">75 percent</option>
+                                        <option value="100">100 percent</option>
+                                    </select>
+                                </div>
+                                <div class="sizes-container customization-container">
+                                    <label class="customization-title sizes" for="americano-mocha-sizes">Sizes :</label>
+                                    <select id="americano-mocha-sizes" name="americano-mocha-sizes">
+                                        <option value="0.85">Small</option>
+                                        <option value="1" selected>Regular</option>
+                                        <option value="1.15">Medium</option>
+                                        <option value="1.3">Large</option>
+                                    </select>
+                                </div>
+                                <div class="quantity-container customization-container">
+                                    <label for="americano-mocha-quantity" class="customization-title quantity">Quantity :</label>
+                                    <div class="product-quantity">
+                                        <button class="product-quantity-element-decrease" id="product-quantity-decrease-americano-mocha"><i class="fa-solid fa-minus"></i></button>
+                                        <input class="product-quantity-element" id="americano-mocha-quantity" type="text" value="1" readonly>
+                                        <button class="product-quantity-element-increase" id="product-quantity-increase-americano-mocha"><i class="fa-solid fa-plus"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       <button class="add-to-cart" id="add-btn-americano-mocha">Add to cart</button>
+                    </div>
+
+                </div>
+                
+            </div>
+
+        </section>
+
+    </main>
+    
+    <script src="Choffee-Menu.js"></script>
+</body>
+</html>    

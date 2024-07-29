@@ -1,0 +1,401 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Jost, sans-serif;
+}
+html, body, main, nav, footer {
+    font-size: 16px;
+    overflow-x: hidden;
+}
+:root {
+    --border-color1: #160f0a;
+    --main-color: #956a47;
+    --secondary-color: #ceb198;
+    --third-color: #d99937;
+    --fourth-color: #492310;
+    
+    --font-light: #f1f1f1;
+    --font-dark: #2c2221;
+}
+/*----------------------------------------- HEADER  ----------------------------------------*/
+header {
+    top: 0;
+    width: 100vw;
+    height: 20px;
+    font-size: 16px;
+    background: var(--fourth-color);
+    color: var(--font-light);
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    position: fixed;
+    z-index: 20;
+}
+.announcement-container {
+    width: 1450px;
+    padding: 2px;
+    text-align: center;
+    overflow-x: hidden;
+}
+.announcement {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    letter-spacing: 1.1px;
+    white-space: nowrap;
+    animation-name: move-right-to-left;
+    animation-iteration-count: infinite;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+}
+@keyframes move-right-to-left{
+    0% {
+        transform: translateX(90%);
+    }
+    100% {
+        transform: translateX(-90%);
+    }
+}
+/*----------------------------------------- NAVIGATION  ----------------------------------------*/
+nav {
+    width: 100vw;
+    height: 50px;
+    top: 20px;
+    position: fixed;
+    display: flex;
+    background-color: var(--secondary-color);
+    z-index: 100;
+    justify-content: center;
+}
+.nav-items {
+    width: 1450px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    aspect-ratio: 3 / 1;
+    width: 100px;
+    border: 1px solid black;
+    padding: 5px;
+}
+#menu-icon{
+    color: var(--bg-color);
+    font-size: 24px;
+    z-index: 7;
+    cursor: pointer;
+    display: none;
+}
+.navlinks{
+    height: 100%;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    right: 0%;
+    position: absolute;
+}
+.navlinks.active {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: absolute;
+    top: 70px;
+    background: white;
+    width: 100%;
+    z-index: 100;
+}
+.navlinks a{
+    text-decoration: none;
+    color: var(--font-dark);
+    font-family: Jost, sans-serif;
+    font-size: 1.35rem;
+    font-weight: 500;
+    transition: ease-out 0.1s;
+}
+.navlinks a:hover {
+    border-bottom: 1px solid var(--border-color1);
+}
+/*----------------------------------------- MAIN  ----------------------------------------*/
+main {
+    margin: 70px auto auto auto;
+    max-width: 1450px;
+    min-height: calc(100vh - 70px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white; 
+    border-radius: 10px;
+}
+main h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--font-dark);
+    padding: 10px;
+}
+.us-word{
+    color: var(--third-color);
+}
+.about-container {
+    border-top: 2px solid var(--main-color);
+    width: 100%;
+    min-height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(var(--secondary-color) 0%, white 15%, white 85%, var(--secondary-color) 100%);
+}
+/*----------------------------------------- SECTION ABOUT CONTAINER LEFT ----------------------------------------*/
+.about-container-left-side{
+    width: 100%;
+    height: 100%;
+    margin-left: 20px;
+    flex-direction: column;
+    padding: 5px;
+}
+.the-founder-title {
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 1rem;
+    padding: 5px 0%;
+    width: 100%;
+    text-align: center;
+    font-weight: 800;
+}
+.choffee-owner-image {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 10px;
+    padding: 10px;
+}
+.caption-of-choso-image {
+    font-size: 0.75rem;
+    font-style: italic;
+    color: #343434;
+}
+/*----------------------------------------- SECTION ABOUT CONTAINER RIGHT ----------------------------------------*/
+.about-container-right-side{
+    width: 100%;
+    min-height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.about-choso-yoora-container {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.founder-name {
+    text-transform: uppercase;
+    letter-spacing: 2rem;
+    font-weight: 700;
+    z-index: 5;
+    font-size: 2.5rem;
+    font-family: Jost,sans-serif;
+    margin-top: 20px;
+    text-shadow: 10px 10px 5px rgba(34, 34, 34, 0.3);
+}
+.about-the-founder-container {
+    background-color: white;
+    border-radius: 10px;
+}
+.about-the-founder {
+    font-size: 1.2rem;
+    text-align: justify;
+    column-gap: 20px;
+    justify-content: center;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+    text-indent: 40px;
+}
+/*----------------------------------------- SECTION MISSION AND VISION ----------------------------------------*/
+.mission-and-vission {
+    max-width: 1450px;
+    display: flex;
+    padding: 20px 50px;
+    gap: 5.5rem;
+    margin: 100px auto;
+}
+.title {
+    font-size: 3rem;
+    font-weight: 600;
+    width: 100%;
+    border-bottom: 2px solid var(--fourth-color);
+    padding-bottom: 1.5rem;
+    color: var(--third-color);
+    text-shadow: 10px 10px 5px rgba(34, 34, 34, 0.3);
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+}
+.icons {
+    color: var(--fourth-color);
+    text-shadow: 10px 10px 5px rgba(34, 34, 34, 0.3);
+    scale: 1.1;
+}
+.content {
+    height: 80%;
+    text-align: justify;
+    text-indent: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.mission-container {
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+    font-size: 1.45rem;
+}
+.vision-container {
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+    font-size: 1.45rem;
+}
+/*----------------------------------------- FOOTER  ----------------------------------------*/
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #dedede;
+}
+.footer-contents-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    max-width:1450px;
+    width: 1450px;
+}
+.social-media, .information, .our-mission {
+    min-height: 300px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    gap: 20px;
+}
+.footer-titles { 
+    text-transform: uppercase;
+    font-size: 22px;
+    color: var(--third-color);
+} 
+.footer-contents{
+    font-family: Jost, sans-serif;
+    font-size: 15px;
+    text-align: justify;
+    text-indent: 20px;
+    align-self: center;
+}
+.social-media-container {
+    display: flex;
+    flex-direction: column;
+}
+.social-media a{
+    text-decoration: none;
+    width: 100%;
+}
+.social-media a:hover{
+    text-decoration: underline;
+}
+.social-media i{
+    font-size: 22px;
+    margin-bottom: 5px;
+    color: var(--third-color);
+    margin-right: 5px;
+    width: 10%;
+    justify-content: flex-end;
+}
+.logo-title{
+    color: black;
+    font-family: Jost, sans-serif;
+    font-size: 16px;
+}
+/*----------------------------------------- RESPONSIVENESS  ----------------------------------------*/
+@media only screen and (max-width: 1440px) {
+    html {
+        font-size: 14px;
+    }
+    .nav-items {
+        width: 90%;
+    }
+    .founder-name {
+        letter-spacing: 1.5rem;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    html {
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        background: linear-gradient(to left, var(--secondary-color) 0%, white 15%, white 85%, var(--secondary-color) 100%);
+    }
+    .about-the-founder-container {
+        border-radius: 0;
+    }
+    .mission-and-vission {
+        flex-direction: column;
+        margin: 0px auto;
+    }
+    .about-container-left-side {
+        margin: 0px;
+    }
+    #menu-icon{
+        display: inline;
+    }
+    .navlinks{
+        height: auto;
+        position: fixed;
+        top: -500px;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        background: white;
+        transition: 0.3s;
+        text-align: center;
+        padding: 20px 0px;
+    }
+    .navlinks.active {
+        height: auto;
+        position: fixed;
+        top: 70px;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        background: white;
+        transition: 0.3s;
+        text-align: center;
+        padding: 20px 0px;
+        z-index: 100;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .footer-contents-container {
+        flex-direction: column;
+    }
+    .footer-contents-container div {
+        padding: 0;
+    }
+}
